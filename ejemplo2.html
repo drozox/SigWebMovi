@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<script src="jquery-3.4.1.js"></script>  <!-- plugin jquery -->
+	<script src="https://kit.fontawesome.com/02eb88b373.js" crossorigin="anonymous"></script> <!-- plugin para colocar iconos de fontawesome -->
+	
+	
+	<!-- EJEMPLO 2, PERSONALIZAR ESTILOS-->
+	<style>
+	#boton_uno{
+	background-color:red;
+	}
+	
+	
+	#check{
+	color:blue;
+	font-size: 200%;
+	}
+	
+	
+	#email{
+	background-color:yellow;
+	border-bottom:solid rgba(0,0,255,1);
+	border-radius: 10px;
+	}
+	
+	#image{
+	width:10%;
+	float: right;
+	margin-right: 50%;
+
+	}
+	
+	#div_lista{
+	color:red;
+	}
+	
+	#submit{
+	transform:rotate(270deg);
+	}
+	
+	#reset{
+	box-shadow: 3px 3px teal;
+	}
+	
+	
+	#text{
+	width: 80%;
+	}
+	
+	#ejemplo{
+	color:green;
+	}
+	
+	</style>
+	<title>Ejemplo 2</title>
+	
+	</head>	
+	<body>
+	
+	
+	<input type="button" value="boton" id="boton_uno"> <br> <br><!-- input tipo boton -->
+	
+	<input type="checkbox" name="uno">  <!-- input tipo checkbox con atributo "name" para posteriormente añadirle etiquetas como "hola" y "chao" -->
+	<label for="uno" id="check">Hola</label><br>
+	<input type="checkbox" name="dos">
+	<label for="dos" id="check">Chao</label><br><br> 
+	
+	<input type="color"><br> <br><!-- input para seleccionar color -->
+	
+	<input type="date"><br><br><!-- input para seleccionar fecha -->
+	
+	<input type="datetime-local"><br><br> <!-- input para seleccionar fecha y hora -->
+	
+	<form>  <!-- definir un formulario -->
+	  <input type="email" placeholder="email" id="email"> <!-- input para introducir email y añadir indicación-->
+	</form> <br><br>
+	
+	<input type="file"><br><br> <!-- input para introducir archivo -->
+	
+	<form>
+	<input type="hidden" value="g">  <!-- input para introducir campo invisible -->
+	</form><br><br>
+	
+	<input type="image" src="imagen.png" id="image"><br><br> <!-- input para introducir imagen-->
+	
+	<input type="month"><br><br> <!-- input para introducir mes -->
+	
+	<input type="number"><br><br> <!-- input para introducir un número -->
+	
+	<input type="password" placeholder="contraseña"><br><br> <!-- input para introducir contraseña -->
+	
+	<form>
+	<input type="radio" name="prueba" value="hola">hola
+	<input type="radio" name="prueba" value="chao">chao<br><br> <!-- input para introducir opción circular-->
+	</form>
+	
+	
+	<input id="range" type="range" min="0" max="10" list="lista">
+	<datalist id="lista">
+	  <option value="0" >
+	  <option value="1">
+	  <option value="2">
+	  <option value="3">
+	  <option value="4">
+	  <option value="5">
+	  <option value="6">
+	  <option value="7">
+	  <option value="8">
+	  <option value="9">
+	  <option value="10">
+	</datalist><input type="button" id="mandar" value="Mostrar">
+	<div id="div_lista"></div> <br><br>           <!-- input tipo rango con boton para visualizar en un div la información que se selecciona  -->
+	
+	
+	<form>
+	<input type="text" value="hola"> &nbsp    <!-- input tipo texto con un espacio para el input tipo reset que restablece la información predeterminada -->
+	<input type="reset" id="reset">
+	<form><br><br><br> 
+	
+	
+	<input id="submit" type="submit" value="Submit"><br><br> <br> <!-- input tipo enviar -->
+	
+ 
+	<input id="text" type="text"><br><br>     <!-- input tipo texto-->
+	
+	<input type="time"><br><br>  <!-- input para seleccionar la hora -->
+	
+	<input type="url" value="https://www.youtube.com/watch?v=g1zVqE7phK0&list=RDiToXPV5cyg4&index=14"><br><br> <!-- input tipo url-->
+	
+	<input type="week"><br><br> <!-- input para seleccionar la semana -->
+	<textarea placeholder="comenta"></textarea><br><br>   <!-- input para insertar area de texto -->
+	
+	
+	<p align="center"><a id="ejemplo"   href="ejemplo3.html"  ><i class="fas fa-angry"></i> TEXTO</a></p> <!-- se inserta texto, se alinea a la mitad y se le añade una imagen que proviene de fontawesome -->
+	
+	
+	
+	
+	
+	
+	
+	
+	</body>
+	<script>
+	 
+	$("#mandar").click(function()   //función que se ejecuta al presionar el boton "Mandar"
+	{
+		$("#div_lista").html($("#range").val())   //se introduce dentro del div "div_lista" la información seleccionada del rango con id "range"
+	})
+	</script>
+	
+</html> 
+
+
+
+
+

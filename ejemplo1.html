@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	
+	
+	<style>
+
+	
+	#div_lista{
+	background-color:red;
+	}	
+	</style>
+	
+	
+	</head>
+	
+	
+	
+	
+	<script src="jquery-3.4.1.js"></script>  <!-- plugin jquery -->
+	
+	<body>
+	
+	
+	<input type="button" value="boton"> <br> <br><!-- input tipo boton -->
+	
+	<input type="checkbox" name="uno">  <!-- input tipo checkbox con atributo "name" para posteriormente añadirle etiquetas como "hola" y "chao" -->
+	<label for="uno">Hola</label><br>
+	<input type="checkbox" name="dos">
+	<label for="dos">Chao</label><br><br> 
+	
+	<input type="color"><br> <br><!-- input para seleccionar color -->
+	
+	<input type="date"><br><br><!-- input para seleccionar fecha -->
+	
+	<input type="datetime-local"><br><br> <!-- input para seleccionar fecha y hora -->
+	
+	<form>  <!-- definir un formulario -->
+	  <input type="email" placeholder="email"> <!-- input para introducir email y añadir indicación-->
+	</form> <br><br>
+	
+	<input type="file"><br><br> <!-- input para introducir archivo -->
+	
+	<form>
+	<input type="hidden" value="g">  <!-- input para introducir campo invisible -->
+	</form><br><br>
+	
+	<input type="image" src="imagen.png"><br><br> <!-- input para introducir imagen-->
+	
+	<input type="month"><br><br> <!-- input para introducir mes -->
+	
+	<input type="number"><br><br> <!-- input para introducir un número -->
+	
+	<input type="password" placeholder="contraseña"><br><br> <!-- input para introducir contraseña -->
+	
+	<form>
+	<input type="radio" name="prueba" value="hola">hola
+	<input type="radio" name="prueba" value="chao">chao<br><br> <!-- input para introducir opción circular-->
+	</form>
+	
+	
+	<input id="range" type="range" min="0" max="10" list="lista">
+	<datalist id="lista">
+	  <option value="0" >
+	  <option value="1">
+	  <option value="2">
+	  <option value="3">
+	  <option value="4">
+	  <option value="5">
+	  <option value="6">
+	  <option value="7">
+	  <option value="8">
+	  <option value="9">
+	  <option value="10">
+	</datalist><input type="button" id="mandar" value="Mostrar">
+	<div id="div_lista"></div> <br><br>           <!-- input tipo rango con boton para visualizar en un div la información que se selecciona  -->
+	
+	
+	<form>
+	<input type="text" value="hola"> &nbsp    <!-- input tipo texto con un espacio para el input tipo reset que restablece la información predeterminada -->
+	<input type="reset">
+	<form><br><br>
+	
+	
+	<input type="submit" value="Submit"><br><br> <!-- input tipo enviar -->
+	
+ 
+	<input type="text"><br><br>     <!-- input tipo texto-->
+	
+	<input type="time"><br><br>  <!-- input para seleccionar la hora -->
+	
+	<input type="url" value="https://www.youtube.com/watch?v=g1zVqE7phK0&list=RDiToXPV5cyg4&index=14"><br><br> <!-- input tipo url-->
+	
+	<input type="week"><br><br> <!-- input para seleccionar la semana -->
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	</body>
+	<script>
+	
+	$("#mandar").click(function()
+	{
+		$("#div_lista").html($("#range").val())
+	})
+	</script>
+	
+</html> 
+
+
+
+
+
